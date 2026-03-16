@@ -85,9 +85,19 @@ CHANGELOG.ignore.md
 
 # nix related
 .direnv
-.envrc
 
 # Python bytecode files
 __pycache__/
 *.pyc
 
+
+# Devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml

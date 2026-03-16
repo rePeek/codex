@@ -1,0 +1,35 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "lsp": {
+    "rust": {
+      "command": "rust-analyzer"
+    }
+  },
+  "mcp": { 
+    "deepwiki": {
+      "type": "http",
+      "url": "https://mcp.deepwiki.com/mcp",
+      "timeout": 60
+    }
+  },
+  "providers": {
+    "deepseek": {
+      "type": "openai-compat",
+      "base_url": "https://api.deepseek.com/",
+      "api_key": "$DEEPSEEK_API_KEY",
+      "models": [
+        {
+          "id": "deepseek-chat",
+          "name": "Deepseek-V3.2",
+          "cost_per_1m_in": 0.28,
+          "cost_per_1m_out": 0.42,
+          "cost_per_1m_in_cached": 0.028,
+          "cost_per_1m_out_cached": 0.42,
+          "context_window": 128000,
+          "default_max_tokens": 4000
+        }
+      ]
+    }
+  }
+}
+
